@@ -29,7 +29,7 @@ if valores_nan == 0:
 else:
     print(f'Temos valores {valores_nan} NaN')
 
-concrete_clean = concrete.drop_duplicates()
+concrete_clean = concrete.drop_duplicates().copy()
 if concrete.shape[0] != concrete_clean.shape[0]:
     print('Linhas duplicadas foram encontradas e removidas!')
 print(f'Temos na planilha {concrete_clean.shape[0]} concretos e {concrete_clean.shape[1]} features')
@@ -89,7 +89,7 @@ fig, axes = plt.subplots(nrows=2, ncols=1, figsize=(10,15))
 # Relação entre a resistência do concreto e a relação água/cimento
 corr_matrix = concrete_clean.corr()
 print(f'A matriz de correlação é dada por: \n{corr_matrix}')
-print(f'As maiores correlações da Resistência à Compressão são entre: {corr_matrix['strength'].drop(index='strength').idxmax()}, {corr_matrix.strength.idxmin()}')
+print(f"As maiores correlações da Resistência à Compressão são entre: {corr_matrix['strength'].drop(index='strength').idxmax()}, {corr_matrix.strength.idxmin()}")
 
 sns.histplot(data=concrete_clean, x='strength', kde=True, ax=axes[0], color='green')
 axes[0].set_title('Distribuição da resistência (MPa)')
