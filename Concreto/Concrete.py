@@ -64,7 +64,7 @@ print('=' * 70)
 print('Podemos perceber que a distribuição pelo método QQ-Plot não satisfaz para uma distribuição normal')
 print(f'Apesar de R² estar bem ajustado {r_squared[2]:.3f} podemos perceber pelo gráfico que a curva não segue uma normal')
 
-"""print('=' * 70)
+print('=' * 70)
 print(' UTILIZANDO O FITTER PARA VERIFICAÇÃO ')
 func_distr = Fitter(concrete_clean.strength)
 func_distr.fit()
@@ -72,7 +72,7 @@ print(func_distr.summary())
 plt.show()
 print("A melhor distribuição matemática para estes dados é:")
 print(func_distr.get_best(method='sumsquare_error'))
-print('=' * 70)"""
+print('=' * 70)
 
 print('=' * 70)
 print(' PLOTANDO GRÁFICOS PARA A RELAÇÃO ÁGUA/CIMENTO ')
