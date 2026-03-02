@@ -50,7 +50,7 @@ print(f'Cálculo do p-valor: {p_value:.10f}')
 if p_value < 0.05:
     print('Rejeitamos a hipótese de que a distribuição da resistência não tem relação com a curva normal')
 else:
-    print('Falha ao rejeitar a hipótese nula. O gráfico parece seguir uma distribuição normal')  
+    print('Falha ao rejeitar a hipótese nula.')  
 print('=' * 70)
 
 print('=' * 70)
